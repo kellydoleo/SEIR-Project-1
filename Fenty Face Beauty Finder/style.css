@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
+
+body {
+    background-color: #f3e2dd;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#fenty-face {
+   width: 38%;
+   margin-left: 0px;
+   
+   
+   
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    width: 13%;
+}
+
+#fenty-face > img {
+    width: 90%;
+    position: relative;
+    top: 84px;
+    left: 3%;
+
+}
+
+#fenty-face > h3, p, .button {
+    position: relative;
+    top: -325px;
+    left: -1%;
+    text-align: center;
+}
+
+.hexagon > img {
+    width: 115%;
+}
+
+.hexagon {
+    width: 87%;
+    
+}
+
+#fenty-face > h3, p, .button {
+    font-family: 'Cabin', sans-serif; 
+}
+
+#fenty-face > h3 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+#fenty-face > p {
+    font-size: 20px;
+    
+}
+
+.button > a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+.button {
+    background-color: black;
+    width: 120px;
+    padding-top: 10px ;
+    padding-bottom: 12px;
+    margin-left: 292px;
+
+}
+
+#background {
+   width: 100%;
+   
+}
