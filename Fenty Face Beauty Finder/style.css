@@ -3,9 +3,12 @@
 body {
     background-image: url("fenty_background.png");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-attachment: fixed;
 }
 
 #fenty-face {
@@ -89,4 +92,52 @@ body {
 
 .opaque:hover {
     opacity: 0.5;
+}
+
+.remove-opacity {
+opacity: 1;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+  }
+
+  
+  .carousel-images img:first-of-type {
+      display:block;
+  }
+
+  .carousel-images {
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    left: 223px;
+    top: 50px;
+   
+  }
+
+.next-button {
+    font-size: 40px;
+    position: relative;
+    top: 270px;
+    left: 129px;
+    color: white;
+}
+
+.previous-button {
+    font-size: 40px;
+    position: relative;
+    top: 273px;
+    right: 326px;
+    color: white;
+
+}
+
+.go-back {
+    position: relative;
+    left: 50%;
 }

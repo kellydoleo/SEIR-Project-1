@@ -15,7 +15,7 @@ const $hoverEffect = (event) => {
     
 }
 
-$(".rihanna-image").on("mouseover", $hoverEffect);
+$(".hexagon").on("mouseover", $hoverEffect);
 
 
 const listOfRihannaImages = [];
@@ -94,8 +94,9 @@ const $slideEffect = (event) => {
         $("#last-container").after($container3);
 
         $("img").addClass("rihanna-image");
+
         
-        $("img").addClass("opaque");
+        $(".rihanna-image").addClass("opaque");
     
 
 
@@ -103,4 +104,73 @@ const $slideEffect = (event) => {
 };
 
 $(".button").on("click", $slideEffect);
+
+
+const $makeupPopup = (event) => {
+    let $image1 = $("#1");
+    
+    
+    $("#fenty-face").detach();
+    $(".container").detach();
+    $image1.removeClass("opaque rihanna-image");
+    // $image1.css("width", "30%");
+    // $image1.css("position", "relative");
+    // $image1.css("top", "50px");
+    // $image1.css("left", "223px");
+    
+    let $carouselDiv = $("<div>").addClass("carousel-images");
+    let $carouselImg = $("<img>").attr("src","rihanna_image_1.1.png");
+    $carouselDiv.append($image1);
+    $carouselDiv.append($carouselImg);
+    let $carouselImg2 = $("<img>").attr("src","rihanna_image_1.2.png");
+    $carouselDiv.append($carouselImg2);
+    
+    $("body").append($carouselDiv);
+    let $nextButton = $("<span>").addClass("lnr lnr-chevron-right next next-button"); 
+  
+
+    let $previousButton = $("<span>").addClass("lnr lnr-chevron-left previous previous-button"); 
+
+    $("body").append($previousButton);
+    $("body").append($nextButton);
+    let currentImgIndex = 0; 
+    let highestIndex = $(".carousel-images").children().length - 1;
+    $(".next").on("click", () => {
+        console.log("Next was clicked");
+        $(".carousel-images").children().eq(currentImgIndex).css("display","none")
+        if (currentImgIndex < highestIndex) {
+            currentImgIndex++;
+        } else {
+            currentImgIndex = 0;
+        };
+        
+        $(".carousel-images").children().eq(currentImgIndex).css("display", "block");
+    });
+
+    $(".previous").on("click", () => {
+        console.log("Next was clicked");
+        $(".carousel-images").children().eq(currentImgIndex).css("display","none");
+    
+        //wrap the carousel back to zero if on the last image:
+        if (currentImgIndex > 0) {
+            currentImgIndex--;
+        } else {
+            currentImgIndex = highestIndex;
+        };
+        
+        $(".carousel-images").children().eq(currentImgIndex).css("display", "block");
+    
+    });
+
+    let $goBackText = $("<h1>").text("GO BACK").addClass("go-back");
+    $("body").append($goBackText).css("cursor","pointer");
+    $(".go-back").on("click", () => {
+        
+    });
+
+
+}
+
+
+$("#1").on("click", $makeupPopup)
 
