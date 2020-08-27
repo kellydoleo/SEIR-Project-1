@@ -165,7 +165,7 @@ const $makeupPopup = (event) => {
     let $goBackText = $("<h1>").text("GO BACK").addClass("go-back");
     $("body").append($goBackText).css("cursor","pointer");
     $(".go-back").on("click", () => {
-        
+        window.location.href = "index.html";
     });
 
 
