@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
 
 body {
-    background-color: #f3e2dd;
+    background-image: url("fenty_background.png");
+    background-size: cover;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,11 +16,11 @@ body {
    
 }
 
-#container {
+.container {
     display: flex;
     flex-direction: column;
     /* flex-wrap: wrap; */
-    width: 13%;
+    width: 12%;
 }
 
 #fenty-face > img {
@@ -37,8 +38,9 @@ body {
     text-align: center;
 }
 
-.hexagon > img {
+.rihanna-image {
     width: 115%;
+    cursor: pointer;
 }
 
 .hexagon {
@@ -60,11 +62,7 @@ body {
     
 }
 
-.button > a {
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-}
+
 
 .button {
     background-color: black;
@@ -72,10 +70,23 @@ body {
     padding-top: 10px ;
     padding-bottom: 12px;
     margin-left: 292px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
 
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
 }
 
 #background {
    width: 100%;
    
+}
+
+.opaque:hover {
+    opacity: 0.5;
 }
