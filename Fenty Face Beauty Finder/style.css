@@ -126,6 +126,7 @@ opacity: 1;
     top: 270px;
     left: 129px;
     color: white;
+    cursor: pointer;
 }
 
 .previous-button {
@@ -134,10 +135,23 @@ opacity: 1;
     top: 273px;
     right: 326px;
     color: white;
+    cursor: pointer;
 
 }
 
 .go-back {
     position: relative;
     left: 50%;
+    height: 0%;
+    font-family: "Cabin", sans-serif; 
+
+}
+
+
+.image-1-product-1 {
+    font-family: "Cabin", sans-serif; 
+    position: relative;
+    color: black;
+    
+
 }
