@@ -9,63 +9,233 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     background-attachment: fixed;
+    height: 100%;
 }
 
-#fenty-face {
-   width: 38%;
-   margin-left: 0px;
-   
-   
-   
-}
 
-.container {
-    display: flex;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    width: 12%;
-}
+    #fenty-face {
+        width: 38%;
+        margin-left: 0px;
+        
+        
+        
+     }
+     
+     .container {
+         display: flex;
+         flex-direction: column;
+         /* flex-wrap: wrap; */
+         width: 12%;
+     }
+     
+     #fenty-face > img {
+         width: 90%;
+         position: relative;
+         top: 84px;
+         left: 3%;
+     
+     }
+     
+     #fenty-face > h3, p, .button {
+         position: relative;
+         top: -325px;
+         left: -1%;
+         text-align: center;
+     }
+     
+     .rihanna-image {
+         width: 115%;
+         cursor: pointer;
+     }
+     
+     .hexagon {
+         width: 87%;
+         
+     }
+     
+     #fenty-face > h3, p, .button {
+         font-family: 'Cabin', sans-serif; 
+     }
+     
+     #fenty-face > h3 {
+         font-size: 45px;
+         margin-bottom: 15px;
+     }
+     
+     #fenty-face > p {
+         font-size: 20px;
+         
+     }
+     
+     
+     
+     .button {
+         background-color: black;
+         width: 120px;
+         padding-top: 10px ;
+         padding-bottom: 12px;
+         margin-left: 292px;
+         cursor: pointer;
+         text-decoration: none;
+         color: white;
+         font-size: 12px;
+     
+     }
+     
+     .button:hover {
+         background-color: white;
+         color: black;
+     }
+     
+     #background {
+        width: 100%;
+        
+     }
+     
+     .opaque:hover {
+         opacity: 0.5;
+     }
+     
+     .remove-opacity {
+     opacity: 1;
+     }
+     
+     .carousel-images img {
+         width: 100%;
+         border-radius: 10px;
+         display: none;
+       }
+     
+       
+       .carousel-images img:first-of-type {
+           display:block;
+       }
+     
+       .carousel-images {
+         width: 30%;
+         padding: 10px;
+         border-radius: 10px;
+         box-sizing: border-box;
+         position: relative;
+         left: 223px;
+         top: 50px;
+        
+       }
+     
+     .next-button {
+         font-size: 40px;
+         position: relative;
+         top: 270px;
+         left: 7%;
+         color: white;
+         cursor: pointer;
+     }
+     
+     .previous-button {
+         font-size: 40px;
+         position: relative;
+         top: 273px;
+         right: 17%;
+         color: white;
+         cursor: pointer;
+     
+     }
+     
+     .go-back {
+         position: relative;
+         left: 50%;
+         height: 0%;
+         font-family: "Cabin", sans-serif; 
+     
+     }
+     
+     
+     .image-1-product-1 {
+         font-family: "Cabin", sans-serif; 
+         position: relative;
+         color: black;
+         
+     
+     }
+     
+     
+     .product-image-1 {
+         position: relative; 
+         top: 16px; 
+         left: 9%; 
+         width: 6%; 
+         height: 10%;
+     }
+     
+     .product-image-2 {
+         position: relative; 
+         top: 200px;
+          left: -3%; 
+          width: 6%; 
+          height: 10%;
+     }
+     
+     .product-1-name {
+         left:22%;
+         top: 50px;
+     
+     }
+     
+     .product-1-price-sign {
+         top: 78px;
+         left: 20%;
+     }
+     
+     .product-1-price-number {
+         top: 78px;
+         left: 20%;
+     }
+     
+     .product-2-name {
+         left: 12%;
+         top: 210px;
+     }
+     
+     .product-2-price-sign {
+         left: 9%;
+         top: 230px;
+     }
+     
+     .product-2-price-number {
+         top: 230px;
+         left: 9%;
+     }
 
-#fenty-face > img {
-    width: 90%;
+
+
+
+@media (max-width: 1500px) and (min-width: 800px) {
+
+.next-button {
+    font-size: 40px;
     position: relative;
-    top: 84px;
-    left: 3%;
-
-}
-
-#fenty-face > h3, p, .button {
-    position: relative;
-    top: -325px;
-    left: -1%;
-    text-align: center;
-}
-
-.rihanna-image {
-    width: 115%;
+    top: 212px;
+    left: 9%;
+    color: white;
     cursor: pointer;
 }
 
-.hexagon {
-    width: 87%;
-    
+.previous-button {
+    font-size: 40px;
+    position: relative;
+    top: 212px;
+    right: 13%;
+    color: white;
+    cursor: pointer;
+
 }
 
 #fenty-face > h3, p, .button {
-    font-family: 'Cabin', sans-serif; 
+    position: relative;
+    top: -242px;
+    left: -1%;
+    text-align: center;
 }
-
-#fenty-face > h3 {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-#fenty-face > p {
-    font-size: 20px;
-    
-}
-
-
 
 .button {
     background-color: black;
@@ -77,81 +247,142 @@ body {
     text-decoration: none;
     color: white;
     font-size: 12px;
-
+    left: -21%;
 }
 
-.button:hover {
-    background-color: white;
-    color: black;
-}
-
-#background {
-   width: 100%;
-   
-}
-
-.opaque:hover {
-    opacity: 0.5;
-}
-
-.remove-opacity {
-opacity: 1;
-}
-
-.carousel-images img {
-    width: 100%;
-    border-radius: 10px;
-    display: none;
-  }
-
-  
-  .carousel-images img:first-of-type {
-      display:block;
-  }
-
-  .carousel-images {
-    width: 30%;
-    padding: 10px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    position: relative;
-    left: 223px;
-    top: 50px;
-   
-  }
-
-.next-button {
-    font-size: 40px;
-    position: relative;
-    top: 270px;
-    left: 129px;
-    color: white;
-    cursor: pointer;
-}
-
-.previous-button {
-    font-size: 40px;
-    position: relative;
-    top: 273px;
-    right: 326px;
-    color: white;
-    cursor: pointer;
-
-}
-
-.go-back {
-    position: relative;
-    left: 50%;
-    height: 0%;
-    font-family: "Cabin", sans-serif; 
 
 }
 
 
-.image-1-product-1 {
-    font-family: "Cabin", sans-serif; 
-    position: relative;
-    color: black;
+@media (max-width: 800px) {
+
+
+
+    .carousel-images {
+        width: 57%;
+        padding: 10px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        position: relative;
+        left: 20%;
+        top: 72px;
+       
+      }
+
+      .previous-button {
+        font-size: 40px;
+        position: relative;
+        top: 179px;
+        right: 35%;
+        color: white;
+        cursor: pointer;
     
+    }
+
+    .next-button {
+        font-size: 40px;
+        position: relative;
+        top: 176px;
+        left: 3%;
+        color: white;
+        cursor: pointer;
+    }
+
+    .go-back {
+        position: relative;
+        left: 2%;
+        height: 0%;
+        font-family: "Cabin", sans-serif; 
+    
+    }
+
+    .image-1-product-1 {
+        font-family: "Cabin", sans-serif; 
+        position: relative;
+        color: black;
+        
+    
+    }
+
+    .product-image-1 {
+        position: relative; 
+        top: 126px; 
+        left: 23%; 
+        width: 19%; 
+        height: 10%;
+    }
+    
+    .product-image-2 {
+        position: relative; 
+        top: 324px;
+         left: -14%; 
+         width: 19%; 
+         height: 10%;
+    }
+    
+    .product-1-name {
+        left:41%;
+        top: 50px;
+    
+    }
+    
+    .product-1-price-sign {
+        top: 78px;
+        left: 34%;
+    }
+    
+    .product-1-price-number {
+        top: 78px;
+        left: 34%;
+    }
+    
+    .product-2-name {
+        left: 7%;
+        top: 263px;
+    }
+    
+    .product-2-price-sign {
+        left: -2%;
+        top: 278px;
+    }
+    
+    .product-2-price-number {
+        top: 278px;
+        left: -2%;
+    }
+
+    .container {
+        display: block;
+        position: relative;
+        left: 15%;
+        width: 65%;
+    }
+
+
+    #fenty-face > h3 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+
+    #fenty-face > img {
+        width: 163%;
+        position: relative;
+        top: 60px;
+        left: 39%;
+    
+    }
+
+    .button {
+        left: -39%;
+        top: -201px;
+    }
+
+    #fenty-face > h3, p {
+        position: relative;
+        top: -204px;
+        left: 71%;
+        text-align: center;
+    }
 
 }
