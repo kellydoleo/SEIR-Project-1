@@ -1,5 +1,7 @@
 
 
+
+/////////////creates hover effect of images 
 const $hoverEffect = (event) => {
     
     $(event.target).addClass("opaque")
@@ -15,9 +17,13 @@ const $hoverEffect = (event) => {
     
 }
 
+
+
 $(".hexagon").on("mouseover", $hoverEffect);
 
 
+
+////////organizes additional images added to the DOM into a list I can pull from below ////////
 const listOfRihannaImages = [];
 listOfRihannaImages[0] = new Image(); 
 listOfRihannaImages[0].src = "rihanna_image_16.png";
@@ -60,8 +66,7 @@ listOfRihannaImages[8].id = "24";
 
 
 
-
-
+////////allows for additional images to appear after clicking see more/////
 const $slideEffect = (event) => {
     $("#fenty-face").detach();
     
@@ -78,7 +83,7 @@ const $slideEffect = (event) => {
     
      
     
-
+////////adding my additional images from pulling from a list and appending to my DOM
         for (let i=0; i < listOfRihannaImages.length; i++) {
             if (i===0 || i ===1 || i===2) {
             $hexagon.append(listOfRihannaImages[i]);
@@ -117,19 +122,30 @@ const $slideEffect = (event) => {
 
 $(".button").on("click", $slideEffect);
 
+/* 
+The code below occurs on each click of an image on the DOM. When one clicks on an image, the elements on the 
+body are detached and only the image clicked remains along with the addition of make up products which are 
+pulled from an API. 
+
+*/
+
+
+
+
+/////////////////////////////////////////////////////////////////
+/////IMAGE ONE///////////
+////////////////////////////////////////////////////////////////////////
+
 
 const $imageOnePopup = (event) => {
     let $image1 = $(event.target);
     
-    
+    ////removing the body//////////////
     $("#fenty-face").detach();
     $(".container").detach();
     $image1.removeClass("opaque rihanna-image");
-    // $image1.css("width", "30%");
-    // $image1.css("position", "relative");
-    // $image1.css("top", "50px");
-    // $image1.css("left", "223px");
-    
+   
+    ///////////creating a carousel//////////
     let $carouselDiv = $("<div>").addClass("carousel-images");
     let $carouselImg = $("<img>").attr("src","rihanna_image_1.1.png");
     $carouselDiv.append($image1);
@@ -138,8 +154,9 @@ const $imageOnePopup = (event) => {
     $carouselDiv.append($carouselImg2);
     
     $("body").append($carouselDiv);
+
+    //////////adding buttons to carousel ////////////////
     let $nextButton = $("<span>").addClass("lnr lnr-chevron-right next next-button"); 
-  
 
     let $previousButton = $("<span>").addClass("lnr lnr-chevron-left previous previous-button"); 
 
@@ -174,6 +191,7 @@ const $imageOnePopup = (event) => {
     
     });
 
+    /////creating a method to return to the original home screen before changing the DOM ///////////
     let $goBackText = $("<h1>").text("GO BACK").addClass("go-back").css("cursor","pointer");;
     $("body").append($goBackText)
     $(".go-back").on("click", () => {
@@ -182,17 +200,22 @@ const $imageOnePopup = (event) => {
 
     });
 
+    //////creating addional HTML elements to add my products to
+
     let $product1 = $("<h3>").attr("id", "product-1-name");
     let $product1Sign = $("<h5>").attr("id", "product-1-price-sign");
     let $product1Num = $("<h5>").attr("id", "product-1-price-number");
-    // let $productImage = $("<div>").attr("id", "product-image");
+   
 
 
     $("body").append($product1);
     $("body").append($product1Sign);
     $("body").append($product1Num);
-    // $("body").append($productImage);
+    
 
+
+
+    ///////pulling product names and prices from API ////////
 
     $.ajax({
         url:`https://fenty-api.herokuapp.com/products`
@@ -213,7 +236,7 @@ const $imageOnePopup = (event) => {
 
 
 
-      
+      ////////styling my products names and prices I added above 
       $("#product-1-name").addClass("image-1-product-1");
       $("#product-1-name").addClass("product-1-name");
       
@@ -227,11 +250,6 @@ const $imageOnePopup = (event) => {
 
      
 
-
-
-
-
-
     let $product2 = $("<h3>").attr("id", "product-2-name");
     let $product2Sign = $("<h5>").attr("id", "product-2-price-sign");
     let $product2Num = $("<h5>").attr("id", "product-2-price-number");
@@ -242,6 +260,7 @@ const $imageOnePopup = (event) => {
     $("body").append($product2Sign);
     $("body").append($product2Num);
     // $("body").append($productImage);
+
 
 
     $.ajax({
@@ -283,6 +302,16 @@ const $imageOnePopup = (event) => {
 
 
 $("#1").on("click", $imageOnePopup)
+
+/* 
+
+The following code is merely a copy of the one above but for each indivudal image I added. I added 24 images. 
+
+*/
+
+
+
+
 
 ////////////////////////////////////////////////////////
 //IMAGE TWO///
