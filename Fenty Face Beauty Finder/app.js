@@ -10,11 +10,7 @@ const $hoverEffect = (event) => {
 //    } else {
 //     $(event.target).removeClass("opaque");
 //    }
-  
-     
-
-
-    
+   
 }
 
 

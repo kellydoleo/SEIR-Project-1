@@ -4,3 +4,17 @@ I took it upon myself to redesign the "Shop Rihanna's Looks" tab of the fentybea
 
 
 Click on the images to see what products Rihanna used in her beauty looks. 
+
+Issues 
+• Resetting my page 
+• Limiting on click 
+• adding more images
+
+
+Unsolved Problems
+• API and product images take a while to load in comparison to the rest of the page 
+• making the page responsive beyond the @media tags pixels 
+
+Stretch Goals
+• Create a search to up any Rihanna looks 
+• Make my code more DRY
